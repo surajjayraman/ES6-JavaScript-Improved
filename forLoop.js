@@ -17,9 +17,13 @@ Array.prototype.decimalfy = function() {
   }
 };
   
-const digitList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  
-for (const index in digitList) {
-  console.log(digitList[index]);
+for (const index in digits) {
+  console.log(digits[index]);
 }
+
+// The for...of loop is used to loop over any type of data that is iterable.
+for (const digit of digits) {
+  console.log(digit);
+}
+
 
