@@ -26,4 +26,29 @@ for (const digit of digits) {
   console.log(digit);
 }
 
+// The for...of loop also has some additional benefits
+// that fix the weaknesses of the for and for...in loops.
+// You can stop or break a for...of loop at anytime.
+for (const digit of digits) {
+  if (digit % 2 === 0) {
+    continue;
+  }
+  console.log(digit);
+}
+
+// And you don’t have to worry about adding
+// new properties to objects.
+// The for...of loop will only loop over the values in the object.
+Array.prototype.decimalfy = function() {
+  for (let i = 0; i < this.length; i++) {
+    this[i] = this[i].toFixed(2);
+  }
+};
+// This time, the properties were not printed out to the console.
+for (const digit of digits) {
+  console.log(digit);
+}
+
+
+
 
