@@ -40,3 +40,17 @@ function greet(name = 'Student', greeting = 'Welcome') {
 
 console.log(greet());
 
+// Defaults and destructuring arrays
+function createGrid([width = 5, height = 5] = []) {
+  return `Generates a ${width} x ${height} grid`;
+}
+
+console.log(createGrid([2,3]));
+console.log(createGrid([2,undefined]));
+console.log(createGrid());
+
+function houseDescriptor([houseColor = 'green', shutterColors = ['red']]) {
+  return `I have a ${houseColor} house with ${shutterColors.join(' and ')} shutters`;
+}
+console.log(houseDescriptor['green', ['white']]);
+console.log(houseDescriptor(['green']));
