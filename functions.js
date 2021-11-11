@@ -17,3 +17,26 @@ const countryNames = ['Afghanistan', 'Aruba', 'Bahamas', 'Chile', 'Fiji', 'Gabon
 
 const longNames = countryNames.filter(name => name.length > 6);
 console.log(longNames);
+
+// constructor
+function IceCream() {
+  this.scoops = 0;
+  this.addScoop = function() {
+    this.scoops++;
+    setTimeout(() => {
+      console.log('scoop added!');
+    }, 500);
+  };
+}
+const dessert = new IceCream();
+dessert.addScoop();
+console.log(dessert.scoops);
+
+// ES6 has introduced a new way to create defaults.
+// It's called default function parameters.
+function greet(name = 'Student', greeting = 'Welcome') {
+  return `${greeting} ${name}`;
+}
+
+console.log(greet());
+
