@@ -54,3 +54,10 @@ function houseDescriptor([houseColor = 'green', shutterColors = ['red']]) {
 }
 console.log(houseDescriptor['green', ['white']]);
 console.log(houseDescriptor(['green']));
+
+// Create a buildHouse() function that accepts an object as a default parameter
+const buildHouse = ({floor = 1, color = 'red', walls = 'brick'}={}) => {
+    return `Your house has ${floor} floor(s) with ${color} ${walls} walls.`
+
+}
+console.log(buildHouse({floor: 2, color:'green', walls:'granite'}));
